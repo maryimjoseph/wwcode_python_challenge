@@ -5,6 +5,16 @@
 
 from math import pi
 
-radius = int(input('Enter the radius of the circle : '))
-area_of_circle = pi * radius ** 2
-print('The area of the circle is : ', area_of_circle)
+def input_circle_radius():
+  try:
+    r = float(input('Enter the radius of the circle : '))
+    return r
+  except ValueError:
+    print('Please type in a numeric value for the radius')
+    return -1
+
+radius = input_circle_radius()
+
+if radius != -1:
+  area_of_circle = pi * radius ** 2
+  print('The area of the circle is : ', area_of_circle)
