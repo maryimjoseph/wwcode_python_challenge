@@ -6,7 +6,7 @@
 
 def is_list_sorted(p_list):
   v_list_sorted_asc = sorted(v_list)
-  v_list_sorted_desc = sorted(v_list)  
+  v_list_sorted_desc = sorted(v_list, reverse=True)  
   if p_list == v_list_sorted_asc or p_list == v_list_sorted_desc:
     return True
   else:
